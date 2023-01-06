@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 extension AuthenticatedView where Unauthenticated == EmptyView {
     init(@ViewBuilder content: @escaping () -> Content) {
@@ -39,6 +40,9 @@ struct AuthenticatedView<Content, Unauthenticated>: View where Content: View, Un
                 }
         case .authenticated:
             content()
+                .onReceive(NotificationCenter.default.publisher(for: ASAuthorizationAppleIDProvider.credentialRevokedNotification)) { _ in
+                    viewModel.signOut()
+                }
         }
     }
 }

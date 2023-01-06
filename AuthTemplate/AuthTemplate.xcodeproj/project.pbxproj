@@ -29,6 +29,9 @@
 		13A698E8296810570010AAF5 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A698E7296810570010AAF5 /* UserProfileView.swift */; };
 		13A698EA29681A8A0010AAF5 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A698E929681A8A0010AAF5 /* AuthenticationView.swift */; };
 		13A698EC29681C5D0010AAF5 /* EmailSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A698EB29681C5D0010AAF5 /* EmailSignInView.swift */; };
+		13D61F11296840A0005B4D0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13D61F10296840A0005B4D0D /* GoogleService-Info.plist */; };
+		13D61F142968465E005B4D0D /* EmailAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D61F132968465E005B4D0D /* EmailAuthorization.swift */; };
+		13D61F1629684688005B4D0D /* AppleAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D61F1529684688005B4D0D /* AppleAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		13A698E7296810570010AAF5 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		13A698E929681A8A0010AAF5 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		13A698EB29681C5D0010AAF5 /* EmailSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSignInView.swift; sourceTree = "<group>"; };
+		13D61F10296840A0005B4D0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13D61F132968465E005B4D0D /* EmailAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthorization.swift; sourceTree = "<group>"; };
+		13D61F1529684688005B4D0D /* AppleAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		130D611529674702005DC0B7 /* AuthTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				13D61F10296840A0005B4D0D /* GoogleService-Info.plist */,
 				130D618329676C3A005DC0B7 /* AuthTemplate.entitlements */,
 				130D6179296757FF005DC0B7 /* Authentication */,
 				130D617129675415005DC0B7 /* Info.plist */,
@@ -202,6 +209,7 @@
 		130D6179296757FF005DC0B7 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				13D61F1229684649005B4D0D /* Helpers */,
 				13A698E929681A8A0010AAF5 /* AuthenticationView.swift */,
 				130D618829677623005DC0B7 /* AuthenticatedView.swift */,
 				130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */,
@@ -233,6 +241,15 @@
 				13A698E7296810570010AAF5 /* UserProfileView.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		13D61F1229684649005B4D0D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				13D61F132968465E005B4D0D /* EmailAuthorization.swift */,
+				13D61F1529684688005B4D0D /* AppleAuthorization.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +368,7 @@
 			files = (
 				130D611E29674704005DC0B7 /* Preview Assets.xcassets in Resources */,
 				130D611B29674704005DC0B7 /* Assets.xcassets in Resources */,
+				13D61F11296840A0005B4D0D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,10 +398,12 @@
 				130D617829675758005DC0B7 /* LoginOptionsViewModel.swift in Sources */,
 				13A698EC29681C5D0010AAF5 /* EmailSignInView.swift in Sources */,
 				13A698E529680F770010AAF5 /* HomeView.swift in Sources */,
+				13D61F142968465E005B4D0D /* EmailAuthorization.swift in Sources */,
 				130D617C29675A28005DC0B7 /* EmailSignUpView.swift in Sources */,
 				130D618929677623005DC0B7 /* AuthenticatedView.swift in Sources */,
 				130D6181296764ED005DC0B7 /* AuthenticationViewModel.swift in Sources */,
 				13A698E8296810570010AAF5 /* UserProfileView.swift in Sources */,
+				13D61F1629684688005B4D0D /* AppleAuthorization.swift in Sources */,
 				130D614829674E60005DC0B7 /* ContentViewModel.swift in Sources */,
 				130D611929674702005DC0B7 /* ContentView.swift in Sources */,
 				130D611729674702005DC0B7 /* AuthTemplateApp.swift in Sources */,

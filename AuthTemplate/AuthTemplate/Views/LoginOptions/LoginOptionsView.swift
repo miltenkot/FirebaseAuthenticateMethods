@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct LoginOptionsView: View {
     @Environment(\.dismiss) var dismiss
-    @EnvironmentObject var auth: AuthenticationViewModel
+    @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var authVM: AuthenticationViewModel
     @StateObject var viewModel = LoginOptionsViewModel()
     
     var body: some View {
@@ -18,25 +20,47 @@ struct LoginOptionsView: View {
     
     var content: some View {
         VStack {
-            Button {
-                viewModel.emailAuthIsPresented.toggle()
-            } label: {
-                Text("Sign in with Email")
-                    .padding(.vertical, 8)
-                    .frame(maxWidth: .infinity)
+            Group {
+                singInWithEmail
+                signInWithApple
             }
-            .frame(maxWidth: .infinity)
-            .buttonStyle(.borderedProminent)
             .padding()
-            .sheet(isPresented: $viewModel.emailAuthIsPresented, onDismiss: {
-                DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
-                    dismiss()
-                }
-            }) {
-                AuthenticationView()
-                    .environmentObject(auth)
-            }
         }
+    }
+    
+}
+
+// MARK: Buttons
+extension LoginOptionsView {
+    var singInWithEmail: some View {
+        Button {
+            viewModel.emailAuthIsPresented.toggle()
+        } label: {
+            Text("Sign in with Email")
+                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .buttonStyle(.borderedProminent)
+        .sheet(isPresented: $viewModel.emailAuthIsPresented, onDismiss: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+                dismiss()
+            }
+        }) {
+            AuthenticationView()
+                .environmentObject(authVM)
+        }
+    }
+    
+    var signInWithApple: some View {
+        SignInWithAppleButton { request in
+            authVM.handleSignInWithAppleRequest(request)
+        } onCompletion: { result in
+            authVM.handleSignInWithAppleCompletion(result)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
+        .cornerRadius(8)
     }
 }
 

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AuthenticationServices
+import GoogleSignInSwift
 
 struct LoginOptionsView: View {
     @Environment(\.dismiss) var dismiss
@@ -23,6 +24,7 @@ struct LoginOptionsView: View {
             Group {
                 singInWithEmail
                 signInWithApple
+                signInWithGoogle
             }
             .padding()
         }
@@ -61,6 +63,13 @@ extension LoginOptionsView {
         .frame(maxWidth: .infinity, maxHeight: 50)
         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
         .cornerRadius(8)
+    }
+    
+    var signInWithGoogle: some View {
+        GoogleSignInButton {
+            authVM.signInWithGoogle()
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
     }
 }
 

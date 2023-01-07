@@ -6,18 +6,20 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseAuth
 import Combine
+import GoogleSignIn
 
 enum AuthenticationState {
-  case unauthenticated
-  case authenticating
-  case authenticated
+    case unauthenticated
+    case authenticating
+    case authenticated
 }
 
 enum AuthenticationFlow {
-  case login
-  case signUp
+    case login
+    case signUp
 }
 
 @MainActor
@@ -35,6 +37,14 @@ final class AuthenticationViewModel: ObservableObject {
     @Published var password = ""
     @Published var confirmPassword = ""
     
+    // MARK: - Google Credentials
+    private let clientID = "774711135743-qci94mhlp1bnjg5bq0l8t6rjh438j0g5.apps.googleusercontent.com"
+    
+    /// GIDConfiguration which used our `clientID`.
+    private lazy var configuration: GIDConfiguration = {
+        return GIDConfiguration(clientID: clientID)
+    }()
+    
     // MARK: - AuthStateDidChangeListenerHandle
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     var currentNonce: String?
@@ -46,33 +56,33 @@ final class AuthenticationViewModel: ObservableObject {
     }
     
     func registerAuthStateHandler() {
-      if authStateHandler == nil {
-        authStateHandler = Auth.auth().addStateDidChangeListener { auth, user in
-          self.user = user
-          self.authenticationState = user == nil ? .unauthenticated : .authenticated
-          self.displayName = user?.displayName ?? user?.email ?? ""
+        if authStateHandler == nil {
+            authStateHandler = Auth.auth().addStateDidChangeListener { auth, user in
+                self.user = user
+                self.authenticationState = user == nil ? .unauthenticated : .authenticated
+                self.displayName = user?.email ?? ""
+            }
         }
-      }
     }
     
     func signOut() {
-      do {
-        try Auth.auth().signOut()
-      }
-      catch {
-        print(error)
-        errorMessage = error.localizedDescription
-      }
+        do {
+            try Auth.auth().signOut()
+        }
+        catch {
+            print(error)
+            errorMessage = error.localizedDescription
+        }
     }
     
     func deleteAccount() async -> Bool {
-      do {
-        try await user?.delete()
-        return true
-      }
-      catch {
-        errorMessage = error.localizedDescription
-        return false
-      }
+        do {
+            try await user?.delete()
+            return true
+        }
+        catch {
+            errorMessage = error.localizedDescription
+            return false
+        }
     }
 }

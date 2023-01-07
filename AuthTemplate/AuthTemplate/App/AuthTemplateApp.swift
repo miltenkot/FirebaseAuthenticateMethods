@@ -24,7 +24,6 @@ struct AuthTemplateApp: App {
                         .environmentObject(authViewModel)
                 }
             }
-            
         }
     }
 }

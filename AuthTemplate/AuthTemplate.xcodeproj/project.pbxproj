@@ -12,8 +12,6 @@
 		130D611B29674704005DC0B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130D611A29674704005DC0B7 /* Assets.xcassets */; };
 		130D611E29674704005DC0B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 130D611D29674704005DC0B7 /* Preview Assets.xcassets */; };
 		130D612829674704005DC0B7 /* AuthTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D612729674704005DC0B7 /* AuthTemplateTests.swift */; };
-		130D613229674704005DC0B7 /* AuthTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D613129674704005DC0B7 /* AuthTemplateUITests.swift */; };
-		130D613429674704005DC0B7 /* AuthTemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D613329674704005DC0B7 /* AuthTemplateUITestsLaunchTests.swift */; };
 		130D614829674E60005DC0B7 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D614729674E60005DC0B7 /* ContentViewModel.swift */; };
 		130D61682967525C005DC0B7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 130D61672967525C005DC0B7 /* FirebaseAnalytics */; };
 		130D616A2967525C005DC0B7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 130D61692967525C005DC0B7 /* FirebaseAuth */; };
@@ -25,6 +23,13 @@
 		130D617C29675A28005DC0B7 /* EmailSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D617B29675A28005DC0B7 /* EmailSignUpView.swift */; };
 		130D6181296764ED005DC0B7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */; };
 		130D618929677623005DC0B7 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D618829677623005DC0B7 /* AuthenticatedView.swift */; };
+		1362F40E296C70B000CACC79 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F40D296C70B000CACC79 /* GoogleSignIn */; };
+		1362F410296C70CB00CACC79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F40F296C70CB00CACC79 /* FirebaseAuth */; };
+		1362F413296C739E00CACC79 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F412296C739E00CACC79 /* FacebookCore */; };
+		1362F415296C739E00CACC79 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F414296C739E00CACC79 /* FacebookLogin */; };
+		1362F417296C739E00CACC79 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F416296C739E00CACC79 /* FacebookShare */; };
+		1362F41A296CAE7400CACC79 /* FacebookSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1362F419296CAE7400CACC79 /* FacebookSignInView.swift */; };
+		1362F41D296CB5AE00CACC79 /* RandomNonceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1362F41C296CB5AE00CACC79 /* RandomNonceString.swift */; };
 		13750BC629697EC800DCCF54 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 13750BC529697EC800DCCF54 /* GoogleSignIn */; };
 		13750BC829697EC800DCCF54 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13750BC729697EC800DCCF54 /* GoogleSignInSwift */; };
 		13750BCB2969923B00DCCF54 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13750BCA2969923B00DCCF54 /* UIApplication+Extension.swift */; };
@@ -46,13 +51,6 @@
 			remoteGlobalIDString = 130D611229674702005DC0B7;
 			remoteInfo = AuthTemplate;
 		};
-		130D612E29674704005DC0B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 130D610B29674702005DC0B7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 130D611229674702005DC0B7;
-			remoteInfo = AuthTemplate;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -63,9 +61,6 @@
 		130D611D29674704005DC0B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		130D612329674704005DC0B7 /* AuthTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		130D612729674704005DC0B7 /* AuthTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTemplateTests.swift; sourceTree = "<group>"; };
-		130D612D29674704005DC0B7 /* AuthTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		130D613129674704005DC0B7 /* AuthTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTemplateUITests.swift; sourceTree = "<group>"; };
-		130D613329674704005DC0B7 /* AuthTemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		130D614729674E60005DC0B7 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		130D617129675415005DC0B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		130D617529675660005DC0B7 /* LoginOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
@@ -74,6 +69,8 @@
 		130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		130D618329676C3A005DC0B7 /* AuthTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthTemplate.entitlements; sourceTree = "<group>"; };
 		130D618829677623005DC0B7 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
+		1362F419296CAE7400CACC79 /* FacebookSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignInView.swift; sourceTree = "<group>"; };
+		1362F41C296CB5AE00CACC79 /* RandomNonceString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNonceString.swift; sourceTree = "<group>"; };
 		13750BCA2969923B00DCCF54 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		13750BCC2969926800DCCF54 /* GoogleAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthorization.swift; sourceTree = "<group>"; };
 		13750BD3296B148A00DCCF54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -95,8 +92,11 @@
 				13750BC829697EC800DCCF54 /* GoogleSignInSwift in Frameworks */,
 				130D616E2967525C005DC0B7 /* FirebaseFirestore in Frameworks */,
 				130D616C2967525C005DC0B7 /* FirebaseAuthCombine-Community in Frameworks */,
+				1362F415296C739E00CACC79 /* FacebookLogin in Frameworks */,
 				130D616A2967525C005DC0B7 /* FirebaseAuth in Frameworks */,
 				13750BC629697EC800DCCF54 /* GoogleSignIn in Frameworks */,
+				1362F417296C739E00CACC79 /* FacebookShare in Frameworks */,
+				1362F413296C739E00CACC79 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,13 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		130D612A29674704005DC0B7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1362F40E296C70B000CACC79 /* GoogleSignIn in Frameworks */,
+				1362F410296C70CB00CACC79 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +117,8 @@
 			children = (
 				130D611529674702005DC0B7 /* AuthTemplate */,
 				130D612629674704005DC0B7 /* AuthTemplateTests */,
-				130D613029674704005DC0B7 /* AuthTemplateUITests */,
 				130D611429674702005DC0B7 /* Products */,
+				1362F40C296C70B000CACC79 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,7 +127,6 @@
 			children = (
 				130D611329674702005DC0B7 /* AuthTemplate.app */,
 				130D612329674704005DC0B7 /* AuthTemplateTests.xctest */,
-				130D612D29674704005DC0B7 /* AuthTemplateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,15 +161,6 @@
 				130D612729674704005DC0B7 /* AuthTemplateTests.swift */,
 			);
 			path = AuthTemplateTests;
-			sourceTree = "<group>";
-		};
-		130D613029674704005DC0B7 /* AuthTemplateUITests */ = {
-			isa = PBXGroup;
-			children = (
-				130D613129674704005DC0B7 /* AuthTemplateUITests.swift */,
-				130D613329674704005DC0B7 /* AuthTemplateUITestsLaunchTests.swift */,
-			);
-			path = AuthTemplateUITests;
 			sourceTree = "<group>";
 		};
 		130D614529674E3A005DC0B7 /* Views */ = {
@@ -218,6 +203,7 @@
 		130D6179296757FF005DC0B7 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				1362F41B296CB59200CACC79 /* Security */,
 				13750BCE2969928B00DCCF54 /* Views */,
 				13D61F1229684649005B4D0D /* Helpers */,
 				130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */,
@@ -234,6 +220,29 @@
 			path = EmailAuth;
 			sourceTree = "<group>";
 		};
+		1362F40C296C70B000CACC79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1362F418296CADC000CACC79 /* FacebookAuth */ = {
+			isa = PBXGroup;
+			children = (
+				1362F419296CAE7400CACC79 /* FacebookSignInView.swift */,
+			);
+			path = FacebookAuth;
+			sourceTree = "<group>";
+		};
+		1362F41B296CB59200CACC79 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				1362F41C296CB5AE00CACC79 /* RandomNonceString.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
 		13750BC92969922A00DCCF54 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +256,7 @@
 			children = (
 				130D618829677623005DC0B7 /* AuthenticatedView.swift */,
 				13A698E929681A8A0010AAF5 /* AuthenticationView.swift */,
+				1362F418296CADC000CACC79 /* FacebookAuth */,
 				130D617A2967581D005DC0B7 /* EmailAuth */,
 			);
 			path = Views;
@@ -302,6 +312,9 @@
 				130D616F2967525C005DC0B7 /* FirebaseFirestoreSwift */,
 				13750BC529697EC800DCCF54 /* GoogleSignIn */,
 				13750BC729697EC800DCCF54 /* GoogleSignInSwift */,
+				1362F412296C739E00CACC79 /* FacebookCore */,
+				1362F414296C739E00CACC79 /* FacebookLogin */,
+				1362F416296C739E00CACC79 /* FacebookShare */,
 			);
 			productName = AuthTemplate;
 			productReference = 130D611329674702005DC0B7 /* AuthTemplate.app */;
@@ -321,27 +334,13 @@
 				130D612529674704005DC0B7 /* PBXTargetDependency */,
 			);
 			name = AuthTemplateTests;
+			packageProductDependencies = (
+				1362F40D296C70B000CACC79 /* GoogleSignIn */,
+				1362F40F296C70CB00CACC79 /* FirebaseAuth */,
+			);
 			productName = AuthTemplateTests;
 			productReference = 130D612329674704005DC0B7 /* AuthTemplateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		130D612C29674704005DC0B7 /* AuthTemplateUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 130D613D29674704005DC0B7 /* Build configuration list for PBXNativeTarget "AuthTemplateUITests" */;
-			buildPhases = (
-				130D612929674704005DC0B7 /* Sources */,
-				130D612A29674704005DC0B7 /* Frameworks */,
-				130D612B29674704005DC0B7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				130D612F29674704005DC0B7 /* PBXTargetDependency */,
-			);
-			name = AuthTemplateUITests;
-			productName = AuthTemplateUITests;
-			productReference = 130D612D29674704005DC0B7 /* AuthTemplateUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -360,10 +359,6 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 130D611229674702005DC0B7;
 					};
-					130D612C29674704005DC0B7 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 130D611229674702005DC0B7;
-					};
 				};
 			};
 			buildConfigurationList = 130D610E29674702005DC0B7 /* Build configuration list for PBXProject "AuthTemplate" */;
@@ -378,6 +373,7 @@
 			packageReferences = (
 				130D61662967525C005DC0B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				13750BC429697EC800DCCF54 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				1362F411296C739E00CACC79 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 130D611429674702005DC0B7 /* Products */;
 			projectDirPath = "";
@@ -385,7 +381,6 @@
 			targets = (
 				130D611229674702005DC0B7 /* AuthTemplate */,
 				130D612229674704005DC0B7 /* AuthTemplateTests */,
-				130D612C29674704005DC0B7 /* AuthTemplateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -408,13 +403,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		130D612B29674704005DC0B7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -427,6 +415,7 @@
 				13750BCD2969926800DCCF54 /* GoogleAuthorization.swift in Sources */,
 				130D617829675758005DC0B7 /* LoginOptionsViewModel.swift in Sources */,
 				13A698EC29681C5D0010AAF5 /* EmailSignInView.swift in Sources */,
+				1362F41D296CB5AE00CACC79 /* RandomNonceString.swift in Sources */,
 				13A698E529680F770010AAF5 /* HomeView.swift in Sources */,
 				13D61F142968465E005B4D0D /* EmailAuthorization.swift in Sources */,
 				130D617C29675A28005DC0B7 /* EmailSignUpView.swift in Sources */,
@@ -434,6 +423,7 @@
 				130D6181296764ED005DC0B7 /* AuthenticationViewModel.swift in Sources */,
 				13A698E8296810570010AAF5 /* UserProfileView.swift in Sources */,
 				13D61F1629684688005B4D0D /* AppleAuthorization.swift in Sources */,
+				1362F41A296CAE7400CACC79 /* FacebookSignInView.swift in Sources */,
 				130D614829674E60005DC0B7 /* ContentViewModel.swift in Sources */,
 				130D611929674702005DC0B7 /* ContentView.swift in Sources */,
 				13750BCB2969923B00DCCF54 /* UIApplication+Extension.swift in Sources */,
@@ -449,15 +439,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		130D612929674704005DC0B7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				130D613429674704005DC0B7 /* AuthTemplateUITestsLaunchTests.swift in Sources */,
-				130D613229674704005DC0B7 /* AuthTemplateUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -465,11 +446,6 @@
 			isa = PBXTargetDependency;
 			target = 130D611229674702005DC0B7 /* AuthTemplate */;
 			targetProxy = 130D612429674704005DC0B7 /* PBXContainerItemProxy */;
-		};
-		130D612F29674704005DC0B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 130D611229674702005DC0B7 /* AuthTemplate */;
-			targetProxy = 130D612E29674704005DC0B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -600,8 +576,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AuthTemplate/Preview Content\"";
 				DEVELOPMENT_TEAM = 9AKL82KSN5;
 				ENABLE_PREVIEWS = YES;
+				FACEBOOK_APP_ID = 2415401055283664;
+				FACEBOOK_CLIENT_TOKEN = 1ade06f94825ccd76e7185851d74d783;
+				FACEBOOK_DISPLAY_NAME = AuthTemplate;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthTemplate/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuthTemplate;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -610,7 +591,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.miltenkot.AuthTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REVERSED_CLIENT_ID = "com.googleusercontent.apps.108229990717-v7dk3l96ihk1spoo510vagellkmatn1a";
@@ -632,8 +613,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AuthTemplate/Preview Content\"";
 				DEVELOPMENT_TEAM = 9AKL82KSN5;
 				ENABLE_PREVIEWS = YES;
+				FACEBOOK_APP_ID = 2415401055283664;
+				FACEBOOK_CLIENT_TOKEN = 1ade06f94825ccd76e7185851d74d783;
+				FACEBOOK_DISPLAY_NAME = AuthTemplate;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuthTemplate/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AuthTemplate;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -642,7 +628,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.miltenkot.AuthTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REVERSED_CLIENT_ID = "com.googleusercontent.apps.108229990717-v7dk3l96ihk1spoo510vagellkmatn1a";
@@ -665,6 +651,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = miltenkot.com.AuthTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -685,46 +674,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = miltenkot.com.AuthTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AuthTemplate.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AuthTemplate";
-			};
-			name = Release;
-		};
-		130D613E29674704005DC0B7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9AKL82KSN5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = miltenkot.com.AuthTemplateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AuthTemplate;
-			};
-			name = Debug;
-		};
-		130D613F29674704005DC0B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9AKL82KSN5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = miltenkot.com.AuthTemplateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AuthTemplate;
 			};
 			name = Release;
 		};
@@ -758,21 +714,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		130D613D29674704005DC0B7 /* Build configuration list for PBXNativeTarget "AuthTemplateUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				130D613E29674704005DC0B7 /* Debug */,
-				130D613F29674704005DC0B7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
 		130D61662967525C005DC0B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		1362F411296C739E00CACC79 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 9.0.0;
@@ -813,6 +768,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 130D61662967525C005DC0B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		1362F40D296C70B000CACC79 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13750BC429697EC800DCCF54 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		1362F40F296C70CB00CACC79 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 130D61662967525C005DC0B7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1362F412296C739E00CACC79 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1362F411296C739E00CACC79 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		1362F414296C739E00CACC79 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1362F411296C739E00CACC79 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		1362F416296C739E00CACC79 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1362F411296C739E00CACC79 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
 		};
 		13750BC529697EC800DCCF54 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

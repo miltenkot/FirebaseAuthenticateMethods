@@ -25,6 +25,7 @@ struct LoginOptionsView: View {
                 singInWithEmail
                 signInWithApple
                 signInWithGoogle
+                signInWithFacebook
             }
             .padding()
         }
@@ -70,6 +71,11 @@ extension LoginOptionsView {
             authVM.signInWithGoogle()
         }
         .frame(maxWidth: .infinity, maxHeight: 50)
+    }
+    
+    var signInWithFacebook: some View {
+        FacebookSignInView()
+            .frame(maxWidth: .infinity, maxHeight: 50)
     }
 }
 

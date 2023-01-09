@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 import Combine
 import GoogleSignIn
+import SwiftUI
 
 enum AuthenticationState {
     case unauthenticated
@@ -36,14 +37,6 @@ final class AuthenticationViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var confirmPassword = ""
-    
-    // MARK: - Google Credentials
-    private let clientID = "774711135743-qci94mhlp1bnjg5bq0l8t6rjh438j0g5.apps.googleusercontent.com"
-    
-    /// GIDConfiguration which used our `clientID`.
-    private lazy var configuration: GIDConfiguration = {
-        return GIDConfiguration(clientID: clientID)
-    }()
     
     // MARK: - AuthStateDidChangeListenerHandle
     private var authStateHandler: AuthStateDidChangeListenerHandle?

@@ -26,6 +26,7 @@ struct LoginOptionsView: View {
                 signInWithApple
                 signInWithGoogle
                 signInWithFacebook
+                signInWithTwitter
             }
             .padding()
         }
@@ -76,6 +77,18 @@ extension LoginOptionsView {
     var signInWithFacebook: some View {
         FacebookSignInView()
             .frame(maxWidth: .infinity, maxHeight: 50)
+    }
+    
+    var signInWithTwitter: some View {
+        Button {
+            authVM.signInWithTwitter()
+        } label: {
+            Text("Sign in with Twitter")
+                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .buttonStyle(.borderedProminent)
     }
 }
 

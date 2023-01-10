@@ -42,6 +42,9 @@ final class AuthenticationViewModel: ObservableObject {
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     var currentNonce: String?
     
+    // MARK: - Twitter Provider
+    let provider = OAuthProvider(providerID: "twitter.com")
+    
     init() {
         registerAuthStateHandler()
         verifySignInWithAppleAuthenticationState()

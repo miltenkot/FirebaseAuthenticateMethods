@@ -20,6 +20,14 @@
 				<string>fb$(FACEBOOK_APP_ID)</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(TWITTER_URL)</string>
+			</array>
+		</dict>
 	</array>
 	<key>FacebookAppID</key>
 	<string>2415401055283664</string>

@@ -23,6 +23,7 @@
 		130D617C29675A28005DC0B7 /* EmailSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D617B29675A28005DC0B7 /* EmailSignUpView.swift */; };
 		130D6181296764ED005DC0B7 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */; };
 		130D618929677623005DC0B7 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130D618829677623005DC0B7 /* AuthenticatedView.swift */; };
+		13602E7C296F411C002DA82B /* GitHubAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13602E7B296F411C002DA82B /* GitHubAuthorization.swift */; };
 		1362F40E296C70B000CACC79 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F40D296C70B000CACC79 /* GoogleSignIn */; };
 		1362F410296C70CB00CACC79 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F40F296C70CB00CACC79 /* FirebaseAuth */; };
 		1362F413296C739E00CACC79 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 1362F412296C739E00CACC79 /* FacebookCore */; };
@@ -70,6 +71,7 @@
 		130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		130D618329676C3A005DC0B7 /* AuthTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AuthTemplate.entitlements; sourceTree = "<group>"; };
 		130D618829677623005DC0B7 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
+		13602E7B296F411C002DA82B /* GitHubAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthorization.swift; sourceTree = "<group>"; };
 		1362F419296CAE7400CACC79 /* FacebookSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookSignInView.swift; sourceTree = "<group>"; };
 		1362F41C296CB5AE00CACC79 /* RandomNonceString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNonceString.swift; sourceTree = "<group>"; };
 		13750BCA2969923B00DCCF54 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
@@ -205,9 +207,9 @@
 		130D6179296757FF005DC0B7 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				13602E7D296F45FC002DA82B /* Authorization */,
 				1362F41B296CB59200CACC79 /* Security */,
 				13750BCE2969928B00DCCF54 /* Views */,
-				13D61F1229684649005B4D0D /* Helpers */,
 				130D6180296764ED005DC0B7 /* AuthenticationViewModel.swift */,
 			);
 			path = Authentication;
@@ -220,6 +222,18 @@
 				13A698EB29681C5D0010AAF5 /* EmailSignInView.swift */,
 			);
 			path = EmailAuth;
+			sourceTree = "<group>";
+		};
+		13602E7D296F45FC002DA82B /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				13D61F132968465E005B4D0D /* EmailAuthorization.swift */,
+				13D61F1529684688005B4D0D /* AppleAuthorization.swift */,
+				13750BCC2969926800DCCF54 /* GoogleAuthorization.swift */,
+				13A21478296D847300925526 /* TwitterAuthorization.swift */,
+				13602E7B296F411C002DA82B /* GitHubAuthorization.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 		1362F40C296C70B000CACC79 /* Frameworks */ = {
@@ -278,17 +292,6 @@
 				13A698E7296810570010AAF5 /* UserProfileView.swift */,
 			);
 			path = UserProfile;
-			sourceTree = "<group>";
-		};
-		13D61F1229684649005B4D0D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				13D61F132968465E005B4D0D /* EmailAuthorization.swift */,
-				13D61F1529684688005B4D0D /* AppleAuthorization.swift */,
-				13750BCC2969926800DCCF54 /* GoogleAuthorization.swift */,
-				13A21478296D847300925526 /* TwitterAuthorization.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +424,7 @@
 				1362F41D296CB5AE00CACC79 /* RandomNonceString.swift in Sources */,
 				13A698E529680F770010AAF5 /* HomeView.swift in Sources */,
 				13D61F142968465E005B4D0D /* EmailAuthorization.swift in Sources */,
+				13602E7C296F411C002DA82B /* GitHubAuthorization.swift in Sources */,
 				13A21479296D847300925526 /* TwitterAuthorization.swift in Sources */,
 				130D617C29675A28005DC0B7 /* EmailSignUpView.swift in Sources */,
 				130D618929677623005DC0B7 /* AuthenticatedView.swift in Sources */,

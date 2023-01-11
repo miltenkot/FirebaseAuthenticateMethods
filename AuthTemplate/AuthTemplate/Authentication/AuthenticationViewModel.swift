@@ -43,7 +43,8 @@ final class AuthenticationViewModel: ObservableObject {
     var currentNonce: String?
     
     // MARK: - Twitter Provider
-    let provider = OAuthProvider(providerID: "twitter.com")
+    let twitterProvider = OAuthProvider(providerID: "twitter.com")
+    let githubProvider = OAuthProvider(providerID: "github.com")
     
     init() {
         registerAuthStateHandler()
@@ -79,6 +80,26 @@ final class AuthenticationViewModel: ObservableObject {
         catch {
             errorMessage = error.localizedDescription
             return false
+        }
+    }
+    
+    // MARK: - Helper function using in custom authorization
+    
+    func authorize(credential: AuthCredential?, error: Error?) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        guard let credential = credential else { return }
+        
+        Task {
+            do {
+                try await Auth.auth().signIn(with: credential)
+            }
+            catch {
+                print("Error authenticating: \(error.localizedDescription)")
+            }
         }
     }
 }

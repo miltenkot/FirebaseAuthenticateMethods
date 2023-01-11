@@ -27,6 +27,7 @@ struct LoginOptionsView: View {
                 signInWithGoogle
                 signInWithFacebook
                 signInWithTwitter
+                signInWithGitHub
             }
             .padding()
         }
@@ -89,6 +90,20 @@ extension LoginOptionsView {
         }
         .frame(maxWidth: .infinity, maxHeight: 50)
         .buttonStyle(.borderedProminent)
+    }
+    
+    var signInWithGitHub: some View {
+        Button {
+            authVM.signInWithGitHub()
+        } label: {
+            Text("Sign in with GitHub")
+                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .tint(.black)
+        .buttonStyle(.borderedProminent)
+        
     }
 }
 

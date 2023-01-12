@@ -45,6 +45,7 @@ final class AuthenticationViewModel: ObservableObject {
     // MARK: - Twitter Provider
     let twitterProvider = OAuthProvider(providerID: "twitter.com")
     let githubProvider = OAuthProvider(providerID: "github.com")
+    let microsoftProvider = OAuthProvider(providerID: "microsoft.com")
     
     init() {
         registerAuthStateHandler()

@@ -36,6 +36,7 @@
 		13750BCB2969923B00DCCF54 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13750BCA2969923B00DCCF54 /* UIApplication+Extension.swift */; };
 		13750BCD2969926800DCCF54 /* GoogleAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13750BCC2969926800DCCF54 /* GoogleAuthorization.swift */; };
 		13750BD4296B148A00DCCF54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13750BD3296B148A00DCCF54 /* GoogleService-Info.plist */; };
+		13923C2E2970523F00DF786A /* MicrosoftAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13923C2D2970523F00DF786A /* MicrosoftAuthorization.swift */; };
 		13A21479296D847300925526 /* TwitterAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A21478296D847300925526 /* TwitterAuthorization.swift */; };
 		13A698E529680F770010AAF5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A698E429680F770010AAF5 /* HomeView.swift */; };
 		13A698E8296810570010AAF5 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A698E7296810570010AAF5 /* UserProfileView.swift */; };
@@ -77,6 +78,7 @@
 		13750BCA2969923B00DCCF54 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		13750BCC2969926800DCCF54 /* GoogleAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthorization.swift; sourceTree = "<group>"; };
 		13750BD3296B148A00DCCF54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13923C2D2970523F00DF786A /* MicrosoftAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrosoftAuthorization.swift; sourceTree = "<group>"; };
 		13A21478296D847300925526 /* TwitterAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthorization.swift; sourceTree = "<group>"; };
 		13A698E429680F770010AAF5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		13A698E7296810570010AAF5 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				13750BCC2969926800DCCF54 /* GoogleAuthorization.swift */,
 				13A21478296D847300925526 /* TwitterAuthorization.swift */,
 				13602E7B296F411C002DA82B /* GitHubAuthorization.swift */,
+				13923C2D2970523F00DF786A /* MicrosoftAuthorization.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				13A698EA29681A8A0010AAF5 /* AuthenticationView.swift in Sources */,
 				13750BCD2969926800DCCF54 /* GoogleAuthorization.swift in Sources */,
 				130D617829675758005DC0B7 /* LoginOptionsViewModel.swift in Sources */,
+				13923C2E2970523F00DF786A /* MicrosoftAuthorization.swift in Sources */,
 				13A698EC29681C5D0010AAF5 /* EmailSignInView.swift in Sources */,
 				1362F41D296CB5AE00CACC79 /* RandomNonceString.swift in Sources */,
 				13A698E529680F770010AAF5 /* HomeView.swift in Sources */,

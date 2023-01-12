@@ -28,6 +28,7 @@ struct LoginOptionsView: View {
                 signInWithFacebook
                 signInWithTwitter
                 signInWithGitHub
+                signInWithMicrosoft
             }
             .padding()
         }
@@ -102,6 +103,20 @@ extension LoginOptionsView {
         }
         .frame(maxWidth: .infinity, maxHeight: 50)
         .tint(.black)
+        .buttonStyle(.borderedProminent)
+        
+    }
+    
+    var signInWithMicrosoft: some View {
+        Button {
+            authVM.signInWithMicrosoft()
+        } label: {
+            Text("Sign in with Microsoft")
+                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .tint(.green)
         .buttonStyle(.borderedProminent)
         
     }

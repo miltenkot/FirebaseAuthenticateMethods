@@ -29,6 +29,7 @@ struct LoginOptionsView: View {
                 signInWithTwitter
                 signInWithGitHub
                 signInWithMicrosoft
+                signInWithYahoo
             }
             .padding()
         }
@@ -104,7 +105,6 @@ extension LoginOptionsView {
         .frame(maxWidth: .infinity, maxHeight: 50)
         .tint(.black)
         .buttonStyle(.borderedProminent)
-        
     }
     
     var signInWithMicrosoft: some View {
@@ -118,7 +118,19 @@ extension LoginOptionsView {
         .frame(maxWidth: .infinity, maxHeight: 50)
         .tint(.green)
         .buttonStyle(.borderedProminent)
-        
+    }
+    
+    var signInWithYahoo: some View {
+        Button {
+            authVM.signInWithYahoo()
+        } label: {
+            Text("Sign in with Yahoo")
+                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: 50)
+        .tint(.purple)
+        .buttonStyle(.borderedProminent)
     }
 }
 

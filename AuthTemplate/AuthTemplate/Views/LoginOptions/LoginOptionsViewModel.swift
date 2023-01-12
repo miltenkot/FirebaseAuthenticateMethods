@@ -9,4 +9,5 @@ import Foundation
 
 final class LoginOptionsViewModel: ObservableObject {
     @Published var emailAuthIsPresented = false
+    @Published var phoneAuthIsPresented = false
 }

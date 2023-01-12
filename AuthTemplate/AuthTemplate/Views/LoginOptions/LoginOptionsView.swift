@@ -12,6 +12,7 @@ import GoogleSignInSwift
 struct LoginOptionsView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.showingSheet) var showingSheet
     @EnvironmentObject var authVM: AuthenticationViewModel
     @StateObject var viewModel = LoginOptionsViewModel()
     
@@ -20,18 +21,21 @@ struct LoginOptionsView: View {
     }
     
     var content: some View {
-        VStack {
-            Group {
-                singInWithEmail
-                signInWithApple
-                signInWithGoogle
-                signInWithFacebook
-                signInWithTwitter
-                signInWithGitHub
-                signInWithMicrosoft
-                signInWithYahoo
+        ScrollView {
+            VStack {
+                Group {
+                    signInWithPhone
+                    singInWithEmail
+                    signInWithApple
+                    signInWithGoogle
+                    signInWithFacebook
+                    signInWithTwitter
+                    signInWithGitHub
+                    signInWithMicrosoft
+                    signInWithYahoo
+                }
+                .padding()
             }
-            .padding()
         }
     }
     
@@ -39,6 +43,30 @@ struct LoginOptionsView: View {
 
 // MARK: Buttons
 extension LoginOptionsView {
+    var signInWithPhone: some View {
+        Button {
+            viewModel.phoneAuthIsPresented.toggle()
+        } label: {
+            Text("Sign in with Phone")
+                .padding(.vertical, 8)
+                .frame(maxWidth: .infinity)
+        }
+        .frame(width: 350, height: 50)
+        .buttonStyle(.borderedProminent)
+        .padding(.top, 50)
+        .sheet(isPresented: $viewModel.phoneAuthIsPresented, onDismiss: {
+            Task {
+                try await Task.sleep(for: .milliseconds(1))
+                await MainActor.run(body: {
+                    showingSheet?.wrappedValue = false
+                })
+            }
+        }) {
+            PhoneSignInView()
+                .environmentObject(authVM)
+        }
+    }
+    
     var singInWithEmail: some View {
         Button {
             viewModel.emailAuthIsPresented.toggle()
@@ -47,11 +75,14 @@ extension LoginOptionsView {
                 .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
         .buttonStyle(.borderedProminent)
         .sheet(isPresented: $viewModel.emailAuthIsPresented, onDismiss: {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
-                dismiss()
+            Task {
+                try await Task.sleep(for: .milliseconds(1))
+                await MainActor.run(body: {
+                    showingSheet?.wrappedValue = false
+                })
             }
         }) {
             AuthenticationView()
@@ -65,7 +96,7 @@ extension LoginOptionsView {
         } onCompletion: { result in
             authVM.handleSignInWithAppleCompletion(result)
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
         .cornerRadius(8)
     }
@@ -74,12 +105,12 @@ extension LoginOptionsView {
         GoogleSignInButton {
             authVM.signInWithGoogle()
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
     }
     
     var signInWithFacebook: some View {
         FacebookSignInView()
-            .frame(maxWidth: .infinity, maxHeight: 50)
+            .frame(width: 350, height: 50)
     }
     
     var signInWithTwitter: some View {
@@ -90,7 +121,7 @@ extension LoginOptionsView {
                 .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
         .buttonStyle(.borderedProminent)
     }
     
@@ -102,7 +133,7 @@ extension LoginOptionsView {
                 .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
         .tint(.black)
         .buttonStyle(.borderedProminent)
     }
@@ -115,7 +146,7 @@ extension LoginOptionsView {
                 .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
         .tint(.green)
         .buttonStyle(.borderedProminent)
     }
@@ -128,7 +159,7 @@ extension LoginOptionsView {
                 .padding(.vertical, 8)
                 .frame(maxWidth: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: 50)
+        .frame(width: 350, height: 50)
         .tint(.purple)
         .buttonStyle(.borderedProminent)
     }

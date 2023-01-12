@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var auth: AuthenticationViewModel
+    @Environment(\.showingSheet) var showingSheet
     @StateObject var viewModel = ContentViewModel()
     
     var body: some View {
@@ -36,6 +37,7 @@ struct ContentView: View {
                             .presentationDetents([.large])
                             .presentationDragIndicator(.visible)
                             .environmentObject(auth)
+                            .environment(\.showingSheet, $viewModel.showingSheet)
                     }
                 }
             }
@@ -46,5 +48,16 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct ShowingSheetKey: EnvironmentKey {
+    static let defaultValue: Binding<Bool>? = nil
+}
+
+extension EnvironmentValues {
+    var showingSheet: Binding<Bool>? {
+        get { self[ShowingSheetKey.self] }
+        set { self[ShowingSheetKey.self] = newValue }
     }
 }

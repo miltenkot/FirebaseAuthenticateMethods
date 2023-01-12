@@ -38,6 +38,10 @@ final class AuthenticationViewModel: ObservableObject {
     @Published var password = ""
     @Published var confirmPassword = ""
     
+    // MARK: - Phone
+    @Published var phoneNumber = ""
+    @Published var verificationCode = ""
+    
     // MARK: - AuthStateDidChangeListenerHandle
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     var currentNonce: String?
@@ -87,7 +91,7 @@ final class AuthenticationViewModel: ObservableObject {
     
     // MARK: - Helper function using in custom authorization
     
-    func authorize(credential: AuthCredential?, error: Error?) {
+    func authorize(credential: AuthCredential?, error: Error?, completion: (() -> Void)? = nil) {
         if let error = error {
             print(error.localizedDescription)
             return
@@ -98,6 +102,7 @@ final class AuthenticationViewModel: ObservableObject {
         Task {
             do {
                 try await Auth.auth().signIn(with: credential)
+                completion?()
             }
             catch {
                 print("Error authenticating: \(error.localizedDescription)")
